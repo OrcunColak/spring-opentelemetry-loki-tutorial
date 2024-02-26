@@ -35,10 +35,7 @@
         </plugins>
     </build>
 
-
-
     <dependencies>
-
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -71,6 +68,7 @@
             <artifactId>opentelemetry-exporter-otlp</artifactId>
         </dependency>
 
+        <!-- opentelemetry-collector will push metrics and traces to prometheus, tempo and loki service containers. -->
         <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-registry-otlp</artifactId>
@@ -78,7 +76,7 @@
         </dependency>
 
 
-        <!--TEST -->
+        <!--Testing -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
